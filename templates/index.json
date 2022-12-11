@@ -1,33 +1,8 @@
 {
   "sections": {
-    "rich-text": {
+    "locator": {
       "type": "locator",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "<p>Bro\/p>",
-            "heading_size": "h0"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Describe a collection you'd like to feature.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text"
-      ],
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 20,
-        "padding_bottom": 20
       }
     },
     "collage": {
@@ -624,7 +599,7 @@
     }
   },
   "order": [
-    "rich-text",
+    "locator",
     "collage",
     "multicolumn",
     "collage-1",
