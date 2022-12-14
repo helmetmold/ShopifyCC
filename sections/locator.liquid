@@ -11,6 +11,31 @@
 </style>
 
 
+<head>
+  <title>Locator</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <script src="https://twitter.github.io/typeahead.js/js/handlebars.js"></script>
+  <script src="https://www.gstatic.com/external_hosted/handlebars/v4.7.6/handlebars.min.js"></script>
+  <script defer src="node_modules\@fortawesome\fontawesome-free\js\brands.js"></script>
+  <script defer src="node_modules\@fortawesome\fontawesome-free\js\solid.js"></script>
+  <script defer src="node_modules\@fortawesome\fontawesome-free\js\fontawesome.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" href="stylesheet.css">
+  <script type="text/javascript" src="app.js"></script>
+  <script type="text/javascript" src="locations.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+          data-auto-a11y="true"></script>
+  <script id="locator-result-items-tmpl" type="text/x-handlebars-template">
+    {% for location in locations -%}
+      <li class="location-result" data-location-index="{{index}}">
+      </li>
+      {% endfor %}
+    </script>
+</head>
+
 
 <div class="template-404 page-width page-margin center">
   <p>
@@ -23,3 +48,4 @@
     {{ 'general.continue_shopping' | t }}
   </a>
 </div>
+
