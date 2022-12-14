@@ -10,6 +10,14 @@
   }
 </style>
 
+<link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-card.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-article-card.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'section-featured-blog.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<noscript>{{ 'component-slider.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-card.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-article-card.css' | asset_url | stylesheet_tag }}</noscript>
 
 <head>
   <title>Locator</title>
@@ -26,8 +34,7 @@
   <script type="text/javascript" src="app.js"></script>
   <script type="text/javascript" src="locations.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-  <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
-          data-auto-a11y="true"></script>
+  <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-a11y="true"></script>
   <script id="locator-result-items-tmpl" type="text/x-handlebars-template">
     {% for location in locations -%}
       <li class="location-result" data-location-index="{{index}}">
