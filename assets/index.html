@@ -33,37 +33,10 @@
     <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
             data-auto-a11y="true"></script>
     <script id="locator-result-items-tmpl" type="text/x-handlebars-template">
-        {{#each locations}}
+        {% for location in locations -%}
         <li class="location-result" data-location-index="{{index}}">
-            {{#if CallOut}}
-                <div class="pricediv">
-                    <div class="Cost">
-                        {{Price}}
-                    </div>
-                </div>
-            {{/if}}
-            {{#if Full}}
-            <i id="fulltext">FULL!</i>
-            {{else}}
-            <i class="fas fa-angle-down" id="arrowDown"></i>
-            {{/if}}
-            <button class="select-location">
-                <h2 class="name">{{title}}</h2>
-            </button>
-            <div class="address">{{address1}}<br>{{address2}}</div>
-            {{#if travelDistanceText}}
-            <div class="distance">{{travelDistanceText}}</div>
-            {{/if}}
-            {{#each camps}}
-            <a class="select-camp" onclick="sendvariable('{{../title}}','{{camp}}')">
-                <h2 class="campname">{{camp}}</h2>
-                <h2 class="campdates">{{days}}</h2>
-                <h2 class="campprice">{{price}}</h2>
-                <div class="campicon" style='background-image: url("{{icon}}")'></div>
-            </a>
-            {{/each}}
         </li>
-        {{/each}}
+        {% endfor %}
     </script>
 </head>
 <body>
