@@ -24,3 +24,5 @@ const CONFIGURATION = {
 function initMap() {
     new LocatorPlus(CONFIGURATION);
 }
+
+export {CONFIGURATION};
