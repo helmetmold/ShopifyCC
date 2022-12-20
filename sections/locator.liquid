@@ -1,53 +1,21 @@
-<style type="text/css">
-  .template-404 .title + * {
-    margin-top: 1rem;
-  }
+{{ 'map-finder.css' | asset_url | stylesheet_tag }}
 
-  @media screen and (min-width: 750px) {
-    .template-404 .title + * {
-      margin-top: 2rem;
-    }
-  }
-</style>
+<script src="{{app.js | asset_url}}" defer="defer"></script>
+<script src="{{locations.js | asset_url}}" defer="defer"></script>
 
-<link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'component-card.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'component-article-card.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'section-featured-blog.css' | asset_url }}" media="print" onload="this.media='all'">
 
-<noscript>{{ 'component-slider.css' | asset_url | stylesheet_tag }}</noscript>
-<noscript>{{ 'component-card.css' | asset_url | stylesheet_tag }}</noscript>
-<noscript>{{ 'component-article-card.css' | asset_url | stylesheet_tag }}</noscript>
+<script>
+  alert(CONFIGURATION.locations[0]);
+</script>
 
-<head>
-  <title>Locator</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-  <script src="https://twitter.github.io/typeahead.js/js/handlebars.js"></script>
-  <script src="https://www.gstatic.com/external_hosted/handlebars/v4.7.6/handlebars.min.js"></script>
-  <script defer src="node_modules\@fortawesome\fontawesome-free\js\brands.js"></script>
-  <script defer src="node_modules\@fortawesome\fontawesome-free\js\solid.js"></script>
-  <script defer src="node_modules\@fortawesome\fontawesome-free\js\fontawesome.js"></script>
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-  <link rel="stylesheet" href="stylesheet.css">
-  <script type="text/javascript" src="app.js"></script>
-  <script type="text/javascript" src="locations.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-  <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-a11y="true"></script>
-  <script id="locator-result-items-tmpl" type="text/x-handlebars-template">
-    {% for location in locations -%}
-      <li class="location-result" data-location-index="{{index}}">
-      </li>
-      {% endfor %}
-    </script>
-</head>
 
 
 <div class="template-404 page-width page-margin center">
-  <p>
-    YOOOOOOO9999
-  </p>
+  {% for product in collections["Camps"].products %}
+    {{ product.title }}
+  {% else %}
+    The collection is empty.
+  {% endfor %}
   <h1 class="title">
     {{ 'templates.404.title' | t }}
   </h1>
@@ -55,4 +23,3 @@
     {{ 'general.continue_shopping' | t }}
   </a>
 </div>
-
