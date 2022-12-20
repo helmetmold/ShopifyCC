@@ -1,6 +1,5 @@
 {{ 'map-finder.css' | asset_url | stylesheet_tag }}
 
-
 {% javascript %}
 
 <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.runtime.js" async="async"></script>
@@ -23,7 +22,6 @@ const CONFIGURATION = {
 
 {% endjavascript %}
 
-
 <div class="template-404 page-width page-margin center">
 
   <h1 class="title">
@@ -32,4 +30,5 @@ const CONFIGURATION = {
   <a href="{{ routes.all_products_collection_url }}" class="button">
     {{ 'general.continue_shopping' | t }}
   </a>
+
 </div>
