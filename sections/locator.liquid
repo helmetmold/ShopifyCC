@@ -1,23 +1,13 @@
 {{ 'locations.js' | asset_url | script_tag }}
 {{ 'index.html' | asset_url | script_tag }}
 
-{% javascript %}
-var locations = [];
-for (let index = 0; index < CONFIGURATION.locations.length; index++) 
-{
-  locations[index] = CONFIGURATION.locations[index]; 
-}
-console.log(locations);
-console.log("1");
-{% endjavascript %}
 
-{% assign locationVar = locations %}
 
 <div class="template-404 page-width page-margin center">
   <h1 class="title">
     {{ 'templates.404.title' | t }}
   </h1>
-  <div data-js-variable="{{locationsVar[0]}}"></div>
+  <div id="my-element" data-js-variable="{{locationsVar[0]}}"></div>
   {% for item in locations %}
     <h1 class="title">
       {{item.title}}
@@ -28,3 +18,14 @@ console.log("1");
   </a>
 
 </div>
+
+{% javascript %}
+  var locations = [];
+  for (let index = 0; index < CONFIGURATION.locations.length; index++) 
+  {
+    locations[index] = CONFIGURATION.locations[index]; 
+  }
+  console.log(locations);
+  console.log("1");
+  document.getElementById('my-element').dataset.jsVariable = locations;
+{% endjavascript %}
