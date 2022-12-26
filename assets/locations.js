@@ -25,4 +25,9 @@ function initMap() {
     new LocatorPlus(CONFIGURATION);
 }
 
-export {CONFIGURATION};
+function exportCONFIG() {
+    return CONFIGURATION;
+}
+
+
+
