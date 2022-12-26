@@ -7,7 +7,7 @@
   <h1 class="title">
     {{ 'templates.404.title' | t }}
   </h1>
-  <div id="my-element" data-js-variable="{{locationsVar[0]}}"></div>
+  <div id="my-element" data-js-variable="{{ js_variable }}"></div>
   {% for item in locations %}
     <h1 class="title">
       {{item.title}}
@@ -27,5 +27,6 @@
   }
   console.log(locations);
   console.log("1");
-  document.getElementById('my-element').dataset.jsVariable = locations;
+  const jsVariable = document.getElementById('my-element').dataset.jsVariable;
+  console.log(jsVariable);
 {% endjavascript %}
