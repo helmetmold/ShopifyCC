@@ -25,9 +25,6 @@ const CONFIGURATION = {
   <h1 class="title">
     {{ 'templates.404.title' | t }}
   </h1>
-  <h1 class="title">
-    {{ 'templates.404.title' | t }}
-  </h1>
   {% assign products_by_company = collection.products | sort_natural: "company" %}
     {% for product in products_by_company %}
       <h4>{{ product.title }}</h4>
