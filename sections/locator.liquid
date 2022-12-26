@@ -4,6 +4,13 @@
 
 console.log(CONFIGURATION);
 
+for (let index = 0; index < CONFIGURATION.length; index++) 
+{
+  console.log(CONFIGURATION[index])
+}
+
+
+
 /*
 <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.runtime.js" async="async"></script>
 <script src="example.precompiled.js"></script>
@@ -24,9 +31,6 @@ const CONFIGURATION = {
 <div class="template-404 page-width page-margin center">
   <h1 class="title">
     {{ 'templates.404.title' | t }}
-  </h1>
-  <h1 class="title">
-    {{ 'hello'}}
   </h1>
   <a href="{{ routes.all_products_collection_url }}" class="button">
     {{ 'general.continue_shopping' | t }}
