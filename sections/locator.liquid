@@ -1,8 +1,11 @@
 {{ 'locations.js' | asset_url | script_tag }}
 
 {% javascript %}
-console.log(exportCONFIG);
 
+
+var CONFIG = CONFIGURATION;
+
+console.log(CONFIG);
 
 /*
 <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.runtime.js" async="async"></script>
