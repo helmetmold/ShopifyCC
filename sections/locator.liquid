@@ -1,16 +1,13 @@
 {{ 'locations.js' | asset_url | script_tag }}
 
 {% javascript %}
-
 var locations = [];
-
 for (let index = 0; index < CONFIGURATION.locations.length; index++) 
 {
   locations[index] = CONFIGURATION.locations[index]; 
 }
 
 console.log(locations[0]);
-*/
 {% endjavascript %}
 
 {% assign smoothie_flavors = locations %}
@@ -20,7 +17,9 @@ console.log(locations[0]);
     {{ 'templates.404.title' | t }}
   </h1>
   {% for item in smoothie_flavors %}
-    <h4>{item}</h4>
+    <h1 class="title">
+      {{"yeet"}}
+    </h1>
   {% endfor %}
   <a href="{{ routes.all_products_collection_url }}" class="button">
     {{ 'general.continue_shopping' | t }}
