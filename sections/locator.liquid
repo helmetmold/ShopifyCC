@@ -17,7 +17,7 @@ console.log(locations);
   </h1>
   {% for item in smoothie_flavors %}
     <h1 class="title">
-      {{"yeet"}}
+      {{ 'templates.404.title' | t }}
     </h1>
   {% endfor %}
   <a href="{{ routes.all_products_collection_url }}" class="button">
