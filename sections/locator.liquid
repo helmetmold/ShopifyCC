@@ -28,7 +28,9 @@ const CONFIGURATION = {
   {% assign CampLocations = CONFIGURATION %}
   {% for flavor in CampLocations -%}
     {%- if forloop.length > 0 -%}
-      {{ flavor }}{% unless forloop.last %}-{% endunless -%}
+    <h1 class="title">
+      {{ flavor | t}}{% unless forloop.last %}-{% endunless -%}
+    </h1>
     {%- endif -%}
   {% endfor %}
   <a href="{{ routes.all_products_collection_url }}" class="button">
