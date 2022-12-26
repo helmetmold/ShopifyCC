@@ -17,7 +17,7 @@ console.log("1");
   <h1 class="title">
     {{ 'templates.404.title' | t }}
   </h1>
-  <h1 class="title" data-js-variable="{{ locations[0] }}"></h1>
+  <h1 class="title" data-js-variable="{{locations[0]}}"></h1>
   {% for item in locations %}
     <h1 class="title">
       {{item.title}}
