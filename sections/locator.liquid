@@ -26,7 +26,7 @@ const CONFIGURATION = {
     {{ 'templates.404.title' | t }}
   </h1>
   <p>
-    {% for campLocation in CONFIGURATION %}
+    {% for campLocation in CONFIGURATION.locations %}
       {{ campLocation.title | t}}
     {% endfor %}
   </p>
