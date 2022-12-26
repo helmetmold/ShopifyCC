@@ -1,7 +1,8 @@
 {{ 'map-finder.css' | asset_url | stylesheet_tag }}
+{{ 'locations.js' | asset_url | stylesheet_tag }}
 
 {% javascript %}
-
+/*
 <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.runtime.js" async="async"></script>
 <script src="example.precompiled.js"></script>
 <script>
@@ -19,14 +20,18 @@ const CONFIGURATION = {
     "mapOptions": { "center": { "lat": 38.0, "lng": -100.0 }, "fullscreenControl": true, "mapTypeControl": false, "streetViewControl": false, "zoom": 4, "zoomControl": true, "maxZoom": 17 },
     "mapsApiKey": "AIzaSyDH_VUHgooxpBZJBWEHfHnRt_mcCRsMvyI"
 };
-
+*/
 {% endjavascript %}
 
 <div class="template-404 page-width page-margin center">
-
   <h1 class="title">
     {{ 'templates.404.title' | t }}
   </h1>
+  <p>
+    {% for location in locations %}
+      {{ location.name | t}}
+    {% endfor %}
+  </p>
   <a href="{{ routes.all_products_collection_url }}" class="button">
     {{ 'general.continue_shopping' | t }}
   </a>
