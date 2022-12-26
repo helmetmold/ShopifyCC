@@ -25,12 +25,9 @@ const CONFIGURATION = {
   <h1 class="title">
     {{ 'templates.404.title' | t }}
   </h1>
-  {% assign products_by_company = collection.products | sort_natural: "company" %}
-    {% for product in products_by_company %}
-      <h4 class="title">
-        {{ 'templates.404.title' | t }}
-      </h4>
-    {% endfor %}
+  <h1 class="title">
+    {{ 'hello' | t }}
+  </h1>
   <a href="{{ routes.all_products_collection_url }}" class="button">
     {{ 'general.continue_shopping' | t }}
   </a>
