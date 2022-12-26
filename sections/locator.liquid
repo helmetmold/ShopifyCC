@@ -13,14 +13,14 @@ console.log(locations[0]);
 */
 {% endjavascript %}
 
-{% assign smoothie_flavors = locations[0] %}
+{% assign smoothie_flavors = locations %}
 
 <div class="template-404 page-width page-margin center">
   <h1 class="title">
     {{ 'templates.404.title' | t }}
   </h1>
   {% for item in smoothie_flavors %}
-    <h4>{{ item.Price | t }}</h4>
+    <h4>{item}</h4>
   {% endfor %}
   <a href="{{ routes.all_products_collection_url }}" class="button">
     {{ 'general.continue_shopping' | t }}
