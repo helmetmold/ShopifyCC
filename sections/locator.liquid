@@ -9,15 +9,15 @@ for (let index = 0; index < CONFIGURATION.locations.length; index++)
 console.log(locations);
 {% endjavascript %}
 
-{% assign smoothie_flavors = locations %}
+{% assign locationVar = locations %}
 
 <div class="template-404 page-width page-margin center">
   <h1 class="title">
     {{ 'templates.404.title' | t }}
   </h1>
-  {% for item in smoothie_flavors %}
+  {% for item in locations %}
     <h1 class="title">
-      {{ 'templates.404.title' | t }}
+      {{item.title}}
     </h1>
   {% endfor %}
   <a href="{{ routes.all_products_collection_url }}" class="button">
