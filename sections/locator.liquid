@@ -2,6 +2,9 @@
 {{ 'locations.js' | asset_url | stylesheet_tag }}
 
 {% javascript %}
+console.log(exportCONFIG);
+
+
 /*
 <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.runtime.js" async="async"></script>
 <script src="example.precompiled.js"></script>
@@ -28,7 +31,7 @@ const CONFIGURATION = {
     {{ 'templates.404.title' | t }}
   </h1>
   <p>
-    {% for location in locations %}
+    {% for location in CONFIGURATION %}
       {{ location.name | t}}
     {% endfor %}
   </p>
