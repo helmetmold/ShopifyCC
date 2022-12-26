@@ -28,7 +28,7 @@ const CONFIGURATION = {
   {% assign products_by_company = collection.products | sort_natural: "company" %}
     {% for product in products_by_company %}
       <h4 class="title">
-        {{ 'product.title' | t }}
+        {{ 'templates.404.title' | t }}
       </h4>
     {% endfor %}
   <a href="{{ routes.all_products_collection_url }}" class="button">
