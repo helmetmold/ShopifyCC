@@ -2,10 +2,11 @@
 
 {% javascript %}
 
+var locations = [];
+
 for (let index = 0; index < CONFIGURATION.locations.length; index++) 
 {
-  console.log(index);
-  console.log(CONFIGURATION.locations[index])
+  locations[index] = CONFIGURATION.locations[index]; 
 }
 
 
