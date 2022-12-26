@@ -25,14 +25,16 @@ const CONFIGURATION = {
   <h1 class="title">
     {{ 'templates.404.title' | t }}
   </h1>
-  {% assign CampLocations = CONFIGURATION %}
-  {% for flavor in CampLocations -%}
-    {%- if forloop.length > 0 -%}
-    <h1 class="title">
-      {{ flavor | t}}{% unless forloop.last %}-{% endunless -%}
-    </h1>
-    {%- endif -%}
-  {% endfor %}
+  <h1 class="title"></h1>
+    {% assign CampLocations = CONFIGURATION %}
+    {% for flavor in CampLocations -%}
+      {%- if forloop.length > 0 -%}
+      
+        {{ flavor | t}}{% unless forloop.last %}-{% endunless -%}
+      
+      {%- endif -%}
+    {% endfor %}
+  </h1>
   <a href="{{ routes.all_products_collection_url }}" class="button">
     {{ 'general.continue_shopping' | t }}
   </a>
