@@ -27,12 +27,14 @@ const CONFIGURATION = {
 */
 {% endjavascript %}
 
+{% assign smoothie_flavors = "orange, strawberry, banana" | split: ", " %}
+
 <div class="template-404 page-width page-margin center">
   <h1 class="title">
     {{ 'templates.404.title' | t }}
   </h1>
-  {% for item in CONFIGURATION.locations %}
-    <h4>{{ CONFIGURATION.locations }}</h4>
+  {% for item in smoothie_flavors %}
+    <h4>{{ item }}</h4>
   {% endfor %}
   <a href="{{ routes.all_products_collection_url }}" class="button">
     {{ 'general.continue_shopping' | t }}
