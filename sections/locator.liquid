@@ -25,7 +25,7 @@ const CONFIGURATION = {
   <h1 class="title">
     {{ 'templates.404.title' | t }}
   </h1>
-  <h1 class="title"></h1>
+  <h1 class="title">
     {% assign CampLocations = CONFIGURATION %}
     {% for flavor in CampLocations -%}
       {%- if forloop.length > 0 -%}
