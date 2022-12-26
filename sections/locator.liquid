@@ -31,8 +31,8 @@ const CONFIGURATION = {
   <h1 class="title">
     {{ 'templates.404.title' | t }}
   </h1>
-  {% for product in collection.products %}
-    {{ product.title }}
+  {% for i in CONFIGURATION.locations.length %}
+    {{ CONFIGURATION.locations[i] }}
   {% endfor %}
   <a href="{{ routes.all_products_collection_url }}" class="button">
     {{ 'general.continue_shopping' | t }}
