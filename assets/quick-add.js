@@ -8,7 +8,7 @@ if (!customElements.get('quick-add-modal')) {
     hide(preventFocus = false) {
       const cartNotification = document.querySelector('cart-notification') || document.querySelector('cart-drawer');
       if (cartNotification) cartNotification.setActiveElement(this.openedBy);
-      this.modalContent.innerHTML = '';
+      this.modalContent.innerHTML = 'Boobs';
 
       if (preventFocus) this.openedBy = null;
       super.hide();
@@ -47,7 +47,7 @@ if (!customElements.get('quick-add-modal')) {
     }
 
     setInnerHTML(element, html) {
-      element.innerHTML = "hello";
+      element.innerHTML = html;
 
       // Reinjects the script tags to allow execution. By default, scripts are disabled when using element.innerHTML.
       element.querySelectorAll('script').forEach(oldScriptTag => {
