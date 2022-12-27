@@ -3,57 +3,6 @@
 	<div id="page-header">
 		<h1 class="bh-sl-title">Find Our Store</h1>
 	</div>
-
-	<div class="bh-sl-form-container">
-		<div id="scasl-tab-radius">
-			<form id="bh-sl-user-location" class="scasl-distance" method="post" action="#">
-				<div class="form-input">
-					<label for="bh-sl-address">Current Location</label>
-                  	<div class="scasl-address-wrap">
-                        <input type="text" id="bh-sl-address" name="bh-sl-address" />
-                      	<a href="#" id="scapl-geocode-btn" title="Find My Location" style="background-color: none !important">
-                            <img src="{{ 'sca.location-find-location.png' | asset_url }}">
-                        </a>
-                        <button id="scapl-geocode-btn" type="button">Find My Location</button>
-                    </div>
-				</div>
-
-              	<div class="scasl-see-more-content">
-                  <div class="form-input">
-                      <label for="scasl-radius-container">Search Radius</label>
-                      <select id="scasl-radius-container" name="bh-sl-maxdistance">
-                      </select>
-                  </div>
-
-                  <div class="form-input">
-                      <label for="scasl-lengthUnit">Search Radius Measurement</label>
-                      <select id="scasl-lengthUnit" name="scasl-lengthUnit">
-                          <option value="km">Kilometer</option>
-                          <option value="m">Mile</option>
-                      </select>
-                  </div>
-
-                  <div class="bh-sl-filters-container scasl-tag">
-                      <label for="scasl-tag-list-container">Tags</label>
-                      <ul id="scasl-tag-list-container" class="bh-sl-filters scasl-tag-list">
-                      </ul>
-                  </div>
-                </div>
-
-              	<a class="scasl-see-more">More &raquo;</a>
-              	<a class="scasl-see-less">Less &laquo;</a>
-
-				<div class="scasl-search-btn">
-					<button id="bh-sl-submit" type="submit">Search</button>
-				</div>
-			</form>
-			<div class="spinner">
-	            <div class="double-bounce1"></div>
-	            <div class="double-bounce2"></div>
-          	</div>
-		</div>
-	</div>
-
   	<ul id="scasl-tabs">
       <li class="scasl-tab-list active">List</li>
       <li class="scasl-tab-map">Map</li>
