@@ -259,7 +259,7 @@
                   aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
                   data-product-url="{{ card_product.url }}"
                 >
-                  {{ 'products.product.choose_options' | t }}
+                  {{ 'products.product.choose_options' | t product_name: card_product.title | escape }}
                   <div class="loading-overlay__spinner hidden">
                     <svg
                       aria-hidden="true"
