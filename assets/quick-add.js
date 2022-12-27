@@ -12,7 +12,7 @@ if (!customElements.get('quick-add-modal')) {
 
       if (preventFocus) this.openedBy = null;
       super.hide();
-    
+    }
 
     show(opener) {
       opener.setAttribute('aria-disabled', true);
