@@ -47,7 +47,7 @@ if (!customElements.get('quick-add-modal')) {
     }
 
     setInnerHTML(element, html) {
-      element.innerHTML = html;
+      element.innerHTML = "hello";
 
       // Reinjects the script tags to allow execution. By default, scripts are disabled when using element.innerHTML.
       element.querySelectorAll('script').forEach(oldScriptTag => {
