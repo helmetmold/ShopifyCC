@@ -250,13 +250,6 @@
               </product-form>
             {%- else -%}
               <modal-opener data-modal="#QuickAdd-{{ card_product.id }}">
-                <div
-                  role="dialog"
-                  aria-label="{{ 'products.product.choose_product_options' | t: product_name: card_product.title | escape }}"
-                  aria-modal="true"
-                  class="quick-add-modal__content global-settings-popup"
-                  tabindex="-1"
-                >
                 <button
                   id="{{ product_form_id }}-submit"
                   type="submit"
